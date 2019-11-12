@@ -18,7 +18,7 @@ class AppointmentsController < ApplicationController
             user = User.find(decoded_token[0]['user_id'])
         end
         
-        appointment = Appointment.create(listing_id: user_params[:listing_id], notes: user_params[:notes], user_id: user.id, date_time: user_params[:date_time], location: user_params[:location])
+        appointment = Appointment.create(listing_id: user_params[:listing_id], notes: user_params[:notes], user_id: user.id, date: user_params[:date],time: user_params[:time], location: user_params[:location])
         
         if appointment.valid?
             render json: {appointment: appointment}
@@ -56,6 +56,6 @@ class AppointmentsController < ApplicationController
     private
 
     def user_params
-        params.permit(:id, :listing_id, :notes, :date_time, :location)
+        params.permit(:id, :listing_id, :notes, :date, :time, :location)
     end
 end

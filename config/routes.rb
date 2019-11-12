@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get '/persist', to: 'auth#persist'
 
   get '/userappts', to: 'appointments#user_appointments'
+  get '/userlistings', to: 'saved_listings#user_listings'
 end

@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# require 'unirest'
+
 
 User.destroy_all
 Listing.destroy_all
@@ -21,5 +23,16 @@ Listing.create(rent: 1775, bedrooms: 2, location: "Astoria, NY", broker_fee: "1 
 Listing.create(rent: 1650, bedrooms: 1, location: "Long Island City, NY", broker_fee: "1 month", lease_terms: "1 Year", utilities: "Heat", img: "https://www.mercurynews.com/wp-content/uploads/2019/10/Charlotte.jpg?w=583", description: "Description here")
 Listing.create(rent: 1550, bedrooms: 1, location: "Jamaica, NY", broker_fee: "1 month", lease_terms: "1 Year", utilities: "Heat", img: "https://www.montecito-apts.com/wp-content/uploads/sites/646/2016/03/Montecito_AustinTX_Livingroom_NEW2-768x392.jpg", description: "Description here")
 Listing.create(rent: 1500, bedrooms: 2, location: "Whitestone, NY", broker_fee: "1 month", lease_terms: "1 Year", utilities: "Heat", img: "http://nashvilleguru.com/officialwebsite/wp-content/uploads/2018/04/Flats-at-Silo-Bend-Nashville-Apartments-1.jpg", description: "Description here")
+
 # Listing.create(rent: 1450, bedrooms: 3, location: "College Point, NY", broker_fee: "1 month", lease_terms: "1 Year", utilities: "Heat", img: "http://via.placeholder.com/640x360", description: "Description here")
 # Listing.create(rent: 1675, bedrooms: 2, location: "Flushing, NY", broker_fee: "1 month", lease_terms: "1 Year", utilities: "Heat", img: "http://via.placeholder.com/640x360", description: "Description here")
+
+# response = Unirest.post "https://ZillowdimashirokovV1.p.rapidapi.com/getZestimate.htm",
+#   headers:{
+#     "X-RapidAPI-Host" => "ZillowdimashirokovV1.p.rapidapi.com",
+#     "X-RapidAPI-Key" => "X1-ZWz1hg7f17mvpn_6sext",
+#     "Content-Type" => "application/x-www-form-urlencoded"
+#     }
+    
+# byebug
+# puts response

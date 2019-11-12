@@ -18,6 +18,8 @@ class AuthController < ApplicationController
             decoded_token = JWT.decode(encoded_token, secret, true, {algorithm: 'HS256'})
             user = User.find(decoded_token[0]['user_id'])
             render json: user
+        else
+            render json: {errors: user.errors.full_messages}
         end
     end
 
