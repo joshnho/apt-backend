@@ -1,24 +1,23 @@
-# README
+# ApartmentHunter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Apartmenthunter is an app made to make finding/viewing apartments easier
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
 
-* System dependencies
+```bash
+bundle install #installs all required gems for this app
+rails s #starts up the backend rails server
+```
 
-* Configuration
+Then go to the [front-end](https://github.com/Joshikgs/apt-frontend) and follow the readme there.
 
-* Database creation
+## How it was made
+### Front-End
+ApartmentHunter was built using React as its front-end framework.
+Some redux was utilized
+### Back-End
 
-* Database initialization
+ApartmentHunter's back-end was built with Ruby on Rails, using JWT and BCrypt for security, and PostgreSQL as its database.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+All data currently is manually seeded data and will be updated soon to pull real data .
